@@ -11,8 +11,8 @@ const contenidoPerfil = `
     <p class="comentario">// Desarrollador Web Full Stack</p>
     <p>📍 Santiago del Estero, Arg</p>
     
-    <button onclick="window.location.href='https://google.com'">
-        Contactame
+    <button onclick="window.open('https://github.com/NickoPaz', '_blank')">
+        Ver mi GitHub
     </button>
 `;
 const contenidoHabilidades = `
