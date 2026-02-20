@@ -13,7 +13,7 @@ body {
 
 .contenedor {
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 35px);
 }
 
 .barra-lateral {
@@ -51,4 +51,85 @@ ul {
 
 li {
     cursor: pointer;
+}
+
+/* --- ESTILOS DE LA BARRA SUPERIOR --- */
+.barra-superior {
+    background-color: #323233;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.titulo-ventana {
+    color: #cccccc;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+.botones-ventana {
+    position: absolute;
+    left: 15px;
+    display: flex;
+    gap: 8px;
+}
+
+.boton {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+/* Colores de los botones estilo VSCode */
+.rojo {
+    background-color: #ff5f56;
+}
+
+.amarillo {
+    background-color: #ffbd2e;
+}
+
+.verde {
+    background-color: #27c93f;
+}
+
+/* --- EFECTOS AL PASAR EL MOUSE --- */
+.barra-lateral li {
+    padding: 5px 10px;
+    /* Le damos un poco de espacio para que parezca un botón */
+    border-radius: 5px;
+    /* Bordes un poquito redondeados */
+    transition: background-color 0.2s ease;
+    /* Hace que el cambio de color sea suave, no de golpe */
+}
+
+/* Acá viene la magia del hover */
+.barra-lateral li:hover {
+    background-color: #37373d;
+    /* Un gris un poco más claro que el fondo de la barra */
+    color: #ffffff;
+    /* Aseguramos que el texto brille un poco más */
+}
+
+/* --- ESTILO DEL MENSAJE DE INICIO --- */
+.mensaje-inicial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* Ocupa todo el alto disponible */
+    color: #6e7681;
+    /* Un gris sutil tipo marca de agua */
+    text-align: center;
+
+}
+
+.mensaje-inicial h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #8b949e;
+    /* Un gris un pelín más claro para el título */
 }

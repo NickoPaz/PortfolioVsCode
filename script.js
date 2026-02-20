@@ -1,4 +1,3 @@
-
 const pantalla = document.getElementById("pantalla");
 const btnPerfil = document.getElementById("btn-perfil");
 const btnHabilidades = document.getElementById("btn-habilidades");
@@ -8,13 +7,14 @@ console.log(pantalla);
 
 const contenidoPerfil = `
     <h1>Nicolas Paz</h1>
-    <p class="comentario">// Desarrollador Web Full Stack</p>
+    <p class="comentario"> Desarrollador Web Full Stack</p>
     <p>📍 Santiago del Estero, Arg</p>
     
     <button onclick="window.open('https://github.com/NickoPaz', '_blank')">
         Ver mi GitHub
     </button>
 `;
+
 const contenidoHabilidades = `
     <h1>Habilidades.css</h1>
     <p>body {</p>
@@ -31,14 +31,16 @@ const contenidoProyectos = `
     <p>];</p>
 `;
 
+// --- EVENTOS DE LOS BOTONES ---
+
+btnPerfil.addEventListener("click", function () {
+    pantalla.innerHTML = contenidoPerfil;
+});
+
 btnHabilidades.addEventListener("click", function () {
     pantalla.innerHTML = contenidoHabilidades;
 });
 
 btnProyectos.addEventListener("click", function () {
     pantalla.innerHTML = contenidoProyectos;
-});
-
-btnPerfil.addEventListener("click", function () {
-    pantalla.innerHTML = contenidoPerfil;
 });
